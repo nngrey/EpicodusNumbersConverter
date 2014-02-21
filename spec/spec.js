@@ -23,7 +23,7 @@ describe ("scrabble", function(){
     scrabble('adbfkjq').should.equal(33);
   });
   
-  it('will take "ABDFKJQ" and return result 33', function(){
+  it('will take capital letters and return a result', function(){
     scrabble('ABDFKJQ').should.equal(33);
   });
 });

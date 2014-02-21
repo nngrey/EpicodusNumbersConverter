@@ -1,7 +1,7 @@
 var scrabble = function(input) {
   var letters = input.toLowerCase().split("");
   var result = 0;
-  var value1 = ["a", "e", "i", "o", "u", "l", "n", "r", "s", "t"];
+ // var value1 = ["a", "e", "i", "o", "u", "l", "n", "r", "s", "t"];
   var value2 = ["d", "g"];
   var value3 = ["b", "c", "m", "p"];
   var value4 = ["f", "h", "v", "w", "y"];
@@ -11,9 +11,7 @@ var scrabble = function(input) {
 
 
   letters.forEach(function(letter){
-    if (value1.indexOf(letter) > -1){
-      result += 1;
-    } else if (value2.indexOf(letter) > -1) {
+    if (value2.indexOf(letter) > -1) {
       result += 2;
     } else if (value3.indexOf(letter) > -1) {
       result += 3;
@@ -23,8 +21,10 @@ var scrabble = function(input) {
       result += 5;
     } else if (value8.indexOf(letter) > -1) {
       result += 8;
-    } else if (value10) {
+    } else if (value10.indexOf(letter) > -1) {
       result += 10;
+    } else {
+      result += 1;
     }
   });
   return result;
