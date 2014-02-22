@@ -28,3 +28,13 @@ describe ("scrabble", function(){
   });
 });
 
+describe ("scoreAdder", function(){
+  it('will take an array with one element and return the the correct score', function(){
+    scoreAdder(["a"]).should.equal(1);
+  });
+
+  it('will take an array with multiple elements and return the correct score', function(){
+    scoreAdder(["a", "d", "b", "f", "k", "j", "q"]).should.equal(33);
+  });
+});
+
