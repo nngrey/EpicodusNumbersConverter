@@ -69,7 +69,15 @@ return result;
 };
 
 
-
+$(document).ready(function(){
+  $("#numberEntryForm").submit(function(event){
+  var numberInput = parseInt($("#numberInput").val());
+  var result = numbers(numberInput);
+  $(".result").text(result);
+  $("#result").show();
+  event.preventDefault();    
+  });
+});
 
   // if (input >= 100) {
   //   result = objectHundreds[Math.floor(input / 100)];
